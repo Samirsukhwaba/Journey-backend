@@ -1,8 +1,10 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const { Client } = require('@googlemaps/google-maps-services-js');
 
 const app = express();
+app.use(cors());
 const PORT = 3000;
 const mapsClient = new Client({});
 
